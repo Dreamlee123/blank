@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'pages/info'
+
+  resources :products
+
+  get "/", to: "products#index"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
